@@ -4,6 +4,11 @@ on:
     - cron: '55 6 * * *'
       timezone: Europe/Warsaw
   workflow_dispatch:
+    inputs:
+      source_date:
+        description: 'Warsaw spreadsheet date (YYYY-MM-DD). Leave blank for today.'
+        type: string
+        required: false
 permissions:
   contents: read
 concurrency:
@@ -25,6 +30,8 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run sync
+        env:
+          SYNC_DATE: ${{ inputs.source_date }}
       - run: npm run build
       - name: Commit validated snapshot and discovery history
         run: |
