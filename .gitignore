@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env*
+*.pdf
+*.docx
+*.xlsx
+*.csv
+private/
+*cv-profile*.json
+*backup*.json
+.DS_Store
+.preview/

@@ -1,0 +1,8 @@
+{
+  "name": "updates-for-edward",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "vite", "build": "tsc --noEmit && vite build", "preview": "vite preview", "sync": "node scripts/sync.mjs", "test": "node --test" },
+  "dependencies": { "lucide-react": "0.468.0", "react": "19.2.8", "react-dom": "19.2.8", "papaparse": "5.5.4" },
+  "devDependencies": { "@types/react": "19.2.18", "@types/react-dom": "19.2.3", "@tailwindcss/vite": "4.3.3", "tailwindcss": "4.3.3", "typescript": "5.9.3", "vite": "8.1.5" }
+}
